@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadAndWrite {
+
     public static void read(){
         Scanner scan = findFile();
 
@@ -26,7 +27,7 @@ public class ReadAndWrite {
 
         
         try{
-            file = new File("/Users/gustavogonzalez/Desktop/Coding/JavaCode/Ejercicio-6/src/data.txt");
+            file = new File("./DataCart.txt");
             scan  = new Scanner(file);
             
         }catch(FileNotFoundException e){
