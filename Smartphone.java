@@ -1,6 +1,5 @@
 import java.util.Random;
 
-
 public class Smartphone extends Product implements Callable, Reproducible, Photographable, Portable, Browsable{
     Random rand =  new Random();
 
@@ -11,7 +10,8 @@ public class Smartphone extends Product implements Callable, Reproducible, Photo
         this.brand = brands[rand.nextInt(2)];
     }
 
-
-
+    public Smartphone(String smartp[]){
+        super(smartp);
+    }
 
 }
