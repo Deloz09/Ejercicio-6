@@ -1,6 +1,9 @@
 import java.util.Random;
+imp
 
 public abstract class Product{
+
+
     static Random rand = new Random();
     static int counter = -1;
 
@@ -9,7 +12,7 @@ public abstract class Product{
     protected int markerAR;
     protected String  brand;
     protected String fabricationDate;    
-    protected String props;
+    
 
     /**
      * Metodo constructor
@@ -17,6 +20,21 @@ public abstract class Product{
     public Product(){
         this.fabricationDate =  makeFabDate();
         this.markerAR = makeMarkerAR();
+        
+
+    }
+
+    /**
+     * Este es el metodo constructor para los datos guardados en el archivo .txt
+     * @param data recibe un String con  los datos necesarios
+     */
+    public Product(String[] data){
+        this.price = Integer.parseInt(data[0]);
+        this.serialNo = Integer.parseInt(data[1]);
+        this.markerAR = Integer.parseInt(data[3]);
+        this.brand = data[4];
+        this.fabricationDate = data[5];
+        
 
     }
 
@@ -44,6 +62,10 @@ public abstract class Product{
         counter += 1;
 
         return counter;
+    }
+
+    public static String objectToString(){
+
     }
 
 
