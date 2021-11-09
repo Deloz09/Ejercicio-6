@@ -1,5 +1,5 @@
 import java.util.Random;
-imp
+
 
 public abstract class Product{
 
@@ -64,8 +64,15 @@ public abstract class Product{
         return counter;
     }
 
-    public static String objectToString(){
+    /**
+     * Devuelve los datos del objeto como un String para que puedan ser almacenados persistentemente
+     * @return un string con los datos
+     */
+    public String objectToString(){
+        String str = String.valueOf(this.price) + "," + String.valueOf(this.serialNo) + ","
+                    + String.valueOf(this.markerAR) + "," + this.brand + "," + this.fabricationDate + "\n";
 
+        return str;
     }
 
 
