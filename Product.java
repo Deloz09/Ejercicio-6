@@ -11,7 +11,8 @@ public abstract class Product{
     protected int serialNo;
     protected int markerAR;
     protected String  brand;
-    protected String fabricationDate;    
+    protected String fabricationDate;   
+    protected String type;  
     
 
     /**
@@ -70,7 +71,7 @@ public abstract class Product{
      */
     public String objectToString(){
         String str = String.valueOf(this.price) + "," + String.valueOf(this.serialNo) + ","
-                    + String.valueOf(this.markerAR) + "," + this.brand + "," + this.fabricationDate + "\n";
+                    + String.valueOf(this.markerAR) + "," + this.brand + "," + this.fabricationDate + ","+ this.type +"\n";
 
         return str;
     }
