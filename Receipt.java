@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Receipt {
     String client;
     int nit;
@@ -11,12 +13,13 @@ public class Receipt {
         this.receiptNo = rn;
     }
 
-    public String getReceipt(){
-        String receipt = "";
+    public String[] getReceipt(){
+        
         String nitS = String.valueOf(this.nit);
         String rnS = String.valueOf(this.receiptNo);
-        
-        receipt = client+","+nitS+","+date+","+rnS;
+
+        String[] receipt = {this.client, nitS, this.date, rnS};
+
         return receipt;
     }
 }
