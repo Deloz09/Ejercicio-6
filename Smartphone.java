@@ -1,6 +1,7 @@
 import java.util.Random;
 
-public class Smartphone extends Product{
+
+public class Smartphone extends Product implements Callable, Reproducible, Photographable, Portable, Browsable{
     Random rand =  new Random();
 
     public Smartphone(){        
@@ -9,5 +10,8 @@ public class Smartphone extends Product{
         this.price = 200;
         this.brand = brands[rand.nextInt(2)];
     }
-   
+
+
+
+
 }

@@ -32,6 +32,7 @@ public class ReadAndWrite {
             
         }catch(FileNotFoundException e){
             System.out.println("El archivo no se encontro");
+            System.exit(1);
         }
 
         return scan;

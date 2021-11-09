@@ -1,5 +1,7 @@
 class Controlador{
     public static void main(String[] args){
-        ReadAndWrite.read();
+        Smartphone smartphone = new Smartphone();
+        smartphone.toBrowse();    
+    
     }
 }
