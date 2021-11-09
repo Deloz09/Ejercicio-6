@@ -146,4 +146,61 @@ public class Vista {
     public static void browsing(String webPage){
         System.out.println("Estoy navegando en la pagina: " + webPage);
     }
+
+    /** 
+     * Metodo que solicita el nombre del usuario
+     * @return String
+     * @throws Exception
+     */
+    public String askUser() throws Exception{
+        String user = "";
+        boolean verificacion = false;
+
+        try{
+            while(verificacion == false){
+                System.out.println("Ingrese su nombre de usuario:");
+                user = input.nextLine();
+                if(user.equals("")){
+                    verificacion = false;
+                }else{
+                    verificacion = true;
+                }
+            }
+            //En caso de ingreso invalido
+        }catch (Exception e){
+            String s = "Ocurrio un error en el ingreso de usuario "+ e.toString();
+            throw new Exception(s);
+        }
+        return user;
+    }
+
+    /** 
+     * Metodo que solicita el nit del usuario
+     * @return int
+     * @throws Exception
+     */
+    public int askNit() throws Exception{
+        int nit = 0;
+        boolean verificacion = false;
+
+        try{
+            while(verificacion == false){
+                System.out.println("Ingrese su nit:");
+                nit = input.nextInt();
+                input.nextLine();
+                if(nit == 0){
+                    verificacion = false;
+                }else{
+                    verificacion = true;
+                }
+            }
+            //En caso de ingreso invalido
+        }catch (Exception e){
+            String s = "Ocurrio un error en el ingreso de nit "+ e.toString();
+            throw new Exception(s);
+        }
+        return nit;
+    }
+
+    
 }
