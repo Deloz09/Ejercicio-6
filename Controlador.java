@@ -1,8 +1,8 @@
 class Controlador{    
 
     public static void main(String[] args){
-        menu();    
-    
+       // menu();    
+        ReadAndWrite.read();
     }
 
 

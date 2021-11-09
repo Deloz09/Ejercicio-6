@@ -1,19 +1,23 @@
 import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadAndWrite {
 
-    public static void read(){
+    public static String[] read(){
         Scanner scan = findFile();
+        String[] data = null;
 
-        while (scan.hasNext()){
-            System.out.println(scan.next());
+        if(scan.hasNext()){
+            String line = scan.next();
+            data = line.split(",");
+
         }
-
+        return data;
     }
-
-
 
 
 
@@ -36,6 +40,37 @@ public class ReadAndWrite {
         }
 
         return scan;
+    }
+
+    /**
+     * Metodo que escribe un string
+     * @param str String que se pone en el archivo
+     */
+    public static void writer(String str) {
+        FileWriter writer  = null;
+        
+        try{
+            writer = makeWriter();
+            writer.write(str);
+        }catch(IOException e){
+            System.out.println("El archivo no se encontro");
+            System.exit(1);
+        }
+      
+    
+    }
+
+
+    /**
+     * Encuentra el archivo e instancia el  FileWriter
+     * @return
+     */
+    private static FileWriter makeWriter()throws IOException{
+
+        File file = new File("./Ab DataCart.txt");
+        FileWriter writer = new FileWriter(file);
+
+        return writer;
     }
     
 }
