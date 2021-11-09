@@ -82,9 +82,6 @@ public class Vista {
                             "2. Salir \n" );
     }
 
-    
-
-
     public static int askNum(int limit, String message){
         System.out.println(message);
 
@@ -112,7 +109,6 @@ public class Vista {
 
         return option;
     }
-
 
 
     public static String askString(String message){
