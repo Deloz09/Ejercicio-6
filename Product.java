@@ -1,5 +1,15 @@
 import java.util.Random;
-
+/**
+ * Clase Product
+ * Encargada de simular al producto, es la clase madre de las clases de dispositivos
+ * 
+ * @version 1.0, 08/11/2021
+ * finalizacion 09/11/2021
+ * 
+ * @author 
+ * Diego E. Lemus L. - 21469
+ * Gustavo A. Gonzales P. - 21438
+ */
 
 public abstract class Product{
 

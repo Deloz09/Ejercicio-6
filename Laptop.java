@@ -1,4 +1,15 @@
 import java.util.Random;
+/**
+ * Clase Laptop
+ * Encargada de simular a la laptop (computadora personal), hereda de Product
+ * 
+ * @version 1.0, 08/11/2021
+ * finalizacion 09/11/2021
+ * 
+ * @author 
+ * Diego E. Lemus L. - 21469
+ * Gustavo A. Gonzales P. - 21438
+ */
 
 public class Laptop extends Product implements Browsable,Playable,Reproducible,Portable{
     Random rand =  new Random();

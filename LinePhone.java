@@ -1,4 +1,15 @@
 import java.util.Random;
+/**
+ * Clase LinePhone
+ * Encargada de simular al telefono de liea fija, hereda de Product
+ * 
+ * @version 1.0, 08/11/2021
+ * finalizacion 09/11/2021
+ * 
+ * @author 
+ * Diego E. Lemus L. - 21469
+ * Gustavo A. Gonzales P. - 21438
+ */
 
 public class LinePhone extends Product implements Callable{
     Random rand =  new Random();

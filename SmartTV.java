@@ -1,4 +1,15 @@
 import java.util.Random;
+/**
+ * Clase SmartTV
+ * Encargada de simular al dispositivo smartTV, hereda de Product
+ * 
+ * @version 1.0, 08/11/2021
+ * finalizacion 09/11/2021
+ * 
+ * @author 
+ * Diego E. Lemus L. - 21469
+ * Gustavo A. Gonzales P. - 21438
+ */
 
 public class SmartTV extends Product implements Reproducible, Browsable {
     Random rand =  new Random();

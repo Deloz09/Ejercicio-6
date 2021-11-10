@@ -1,4 +1,15 @@
 import java.util.Random;
+/**
+ * Clase SmartPhone
+ * Encargada de simular al dispositivo smartphone, hereda de Product
+ * 
+ * @version 1.0, 08/11/2021
+ * finalizacion 09/11/2021
+ * 
+ * @author 
+ * Diego E. Lemus L. - 21469
+ * Gustavo A. Gonzales P. - 21438
+ */
 
 public class Smartphone extends Product implements Callable, Reproducible, Photographable, Portable, Browsable{
     Random rand =  new Random();

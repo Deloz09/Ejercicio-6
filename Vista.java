@@ -6,12 +6,12 @@ import java.util.ArrayList;
  * Clase Vista
  * Encargada de recibir y mostrarle la información al usuario.
  * 
- * @version 1.0, 07/11/2021
+ * @version 1.0, 08/11/2021
  * finalizacion 09/11/2021
  * 
  * @author 
  * Diego E. Lemus L. - 21469
- * 
+ * Gustavo A. Gonzales P. - 21438
  */
 
 public class Vista {

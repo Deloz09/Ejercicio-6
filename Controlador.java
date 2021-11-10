@@ -1,5 +1,17 @@
 import java.util.ArrayList;
 import java.util.Random;
+/**
+ * Clase Controlador
+ * Encargada de ejecutar el programa, llevar a cabo la seleccion de opciones, comunicarse con las
+ * demás clases y sus respectivos procesos.
+ * 
+ * @version 1.0, 08/11/2021
+ * finalizacion 09/11/2021
+ * 
+ * @author
+ * Diego E. Lemus L. - 21469
+ * Gustavo A. Gonzales P. - 21438
+ */
 
 class Controlador{    
     static Random rand = new Random();
