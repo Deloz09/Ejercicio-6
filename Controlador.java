@@ -4,7 +4,7 @@ class Controlador{
 
     public static void main(String[] args){
        // menu();    
-        ReadAndWrite.read();
+        init();
     }
 
     public static void init(){
@@ -15,28 +15,36 @@ class Controlador{
         for(int i = 1; i < data.size(); i++){
             if(data.get(i)[5].equals("smartphone")){
                 Smartphone smartPhone = new Smartphone(data.get(i));
-                
+                Cart.addProduct(smartPhone);
+                System.out.println(smartPhone.objectToString());
 
             }else if(data.get(i)[5].equals("cellphone")){
                 CellPhone cellPhone = new CellPhone(data.get(i));
+                Cart.addProduct(cellPhone);
 
             }else if(data.get(i)[5].equals("linephone")){
                 LinePhone linePhone = new LinePhone(data.get(i));
+                Cart.addProduct(linePhone);
 
             }else if(data.get(i)[5].equals("camera")){
                 Camera camera = new Camera(data.get(i));
+                Cart.addProduct(camera);
 
             }else if(data.get(i)[5].equals("laptop")){
                 Laptop laptop = new Laptop(data.get(i));
+                Cart.addProduct(laptop);
 
             }else if(data.get(i)[5].equals("smartTV")){
                 SmartTV smartTV = new SmartTV(data.get(i));
+                Cart.addProduct(smartTV);
 
             }else if(data.get(i)[5].equals("Tablet")){
                 Tablet tablet = new Tablet(data.get(i));
+                Cart.addProduct(tablet);
 
             }else if(data.get(i)[5].equals("smartwatch")){
                 Smartwatch smartwatch = new Smartwatch(data.get(i));
+                Cart.addProduct(smartwatch);
 
             }else if(data.get(i)[5].equals("desktop")){
                 //Desktop desktop = new Desktop(data.get(i));
