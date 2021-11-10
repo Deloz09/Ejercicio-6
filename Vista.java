@@ -1,6 +1,18 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Clase Vista
+ * Encargada de recibir y mostrarle la información al usuario.
+ * 
+ * @version 1.0, 07/11/2021
+ * finalizacion 09/11/2021
+ * 
+ * @author 
+ * Diego E. Lemus L. - 21469
+ * 
+ */
+
 public class Vista {
     static Scanner input = new Scanner(System.in);
 
@@ -198,5 +210,11 @@ public class Vista {
         return nit;
     }
 
+    public void printReceipt(String user, int nit, String fecha, int total){
+        System.out.println("------------------FACTURA------------------");
+        System.out.println("Nombre: "+user+"\t\t\tFecha: "+fecha);
+        System.out.println("NIT: "+nit+"\n");
+        System.out.println("Total a pagar: Q"+total);
+    }
     
 }
