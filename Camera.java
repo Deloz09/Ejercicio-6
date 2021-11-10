@@ -8,10 +8,14 @@ public class Camera extends Product implements Photographable, Reproducible, Por
 
         this.price = 450;
         this.brand = brands[rand.nextInt(2)];
+        setFuncionalities();
+        setRange();
     }
 
     public Camera(String camera[]){
         super(camera);
+        setFuncionalities();
+        setRange();
     }
 
     private void setFuncionalities(){

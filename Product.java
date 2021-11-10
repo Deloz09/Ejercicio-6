@@ -98,6 +98,10 @@ public abstract class Product{
         return this.functionalities;
     }
 
+    public int[] getRange(){
+        return this.range;
+    }
+
     
 
     

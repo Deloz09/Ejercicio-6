@@ -8,10 +8,14 @@ public class Tablet extends Product implements Portable, Browsable, Reproducible
 
         this.price = 150;
         this.brand = brands[rand.nextInt(2)];
+        setFuncionalities();
+        setRange();
     }
 
     public Tablet(String tablet[]){
         super(tablet);
+        setFuncionalities();
+        setRange();
     }
 
     private void setFuncionalities(){

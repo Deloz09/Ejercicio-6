@@ -10,11 +10,13 @@ public class Laptop extends Product implements Browsable,Playable,Reproducible,P
         this.price = 500;
         this.brand = brands[rand.nextInt(2)];
         setFuncionalities();
+        setRange();
     }
 
     public Laptop(String laptop[]){
         super(laptop);
         setFuncionalities();
+        setRange();
     }
 
     private void  setFuncionalities(){

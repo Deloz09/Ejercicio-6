@@ -8,14 +8,22 @@ public class CellPhone extends Product implements Callable, Portable{
 
         this.price = 50;
         this.brand = brands[rand.nextInt(2)];
+        setFuncionalities();
+        setRange();
     }
 
     public CellPhone(String cell[]){
         super(cell);
+        setFuncionalities();
+        setRange();
     }
     
     private void setFuncionalities(){
         this.functionalities = "1. Hacer Llamada \n" +
                                 "2. Portar \n";
+    }
+
+    private void setRange(){
+        this.range = new int[]{1,2};
     }
 }

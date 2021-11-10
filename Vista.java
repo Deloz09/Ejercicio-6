@@ -145,15 +145,6 @@ public class Vista {
     }
 
 
-    public static void calling(int num){
-        System.out.println("llamando a: " + num);
-    }
-
-
-
-    public static void browsing(String webPage){
-        System.out.println("Estoy navegando en la pagina: " + webPage);
-    }
 
     /** 
      * Metodo que solicita el nombre del usuario
@@ -209,6 +200,50 @@ public class Vista {
         }
         return nit;
     }
+
+
+    public static int functionalityMenu(int[] range, String options){
+        int option = 0;
+
+        System.out.println(options);
+        try{
+            System.out.println("\n Ingrese una opcion: ");
+            option = input.nextInt();
+            input.nextLine();
+
+            if((option < range[0])||(option > range[1])){
+                throw new IndexOutOfBoundsException();
+            }
+
+        }catch(IndexOutOfBoundsException e){
+            System.out.println("Esa opcion esta fuera de rango\n");
+            option = functionalityMenu(range, options);
+        }catch(InputMismatchException e){
+            input.nextLine();
+            System.out.println("Ese tipo de dato es incorrecto\n");
+            option = functionalityMenu(range, options);
+        }
+
+        return option;
+    }
+
+
+    public static int askPhone(){
+        int num = 0;
+        System.out.println("Ingrese un numero  de telefono");
+
+        try{
+            num = input.nextInt();
+            input.nextLine();            
+        }catch(InputMismatchException e){
+            System.out.println("El tipo de dato que  ingreso no  es correcto");
+            num = askPhone();
+        }
+        return num;
+    }
+
+
+
 
     public void printReceipt(String user, int nit, String fecha, int total){
         System.out.println("------------------FACTURA------------------");

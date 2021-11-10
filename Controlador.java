@@ -87,38 +87,125 @@ class Controlador{
             switch(Vista.displayStore()){
                 case 1:
                     Smartphone smartphone = new Smartphone();
+                    switch(Vista.functionalityMenu(smartphone.getRange(), smartphone.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(smartphone.toCarry());
+                            break;
+                        case 2:
+                            Vista.displayMessage(smartphone.toCall(Vista.askPhone()));
+                            break;
+                        case 3: 
+                            Vista.displayMessage(smartphone.toReproduce());
+                            break;
+                        case 4:
+                            smartphone.toBrowse(Vista.askString("Ingrese el nombre de una pagina: "));
+                            break;
+                        case 5:
+                            Vista.displayMessage(smartphone.toPhotograph());
+                        
+                    }
                     break;
 
                 case 2:
                     CellPhone cellphone = new CellPhone();
+                    switch(Vista.functionalityMenu(cellphone.getRange(), cellphone.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(cellphone.toCall(Vista.askPhone()));
+                            break;
+                        case 2:
+                            Vista.displayMessage(cellphone.toCarry());
+                            break;
+                    }
                     break;
 
                 case 3: 
                     LinePhone linePhone = new LinePhone();
+                    switch(Vista.functionalityMenu(linePhone.getRange(), linePhone.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(linePhone.toCall(Vista.askPhone()));
+                            break;
+                    }
                     break;
 
                 case 4:
                     Camera camera = new Camera();
+                    switch(Vista.functionalityMenu(camera.getRange(), camera.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(camera.toPhotograph());
+                            break;
+                        case 2:
+                            Vista.displayMessage(camera.toReproduce());
+                            break;
+                        case 3:
+                            Vista.displayMessage(camera.toCarry());
+                            break;
+                    }
                     break;
 
                 case 5:
-                    Desktop desktop = new Desktop();
+                    Desktop desktop = new Desktop();                    
                     break;
 
                 case 6:
                     Laptop laptop = new Laptop();
+                    switch(Vista.functionalityMenu(laptop.getRange(), laptop.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(laptop.toCarry());
+                            break;
+                        case 2:
+                            Vista.displayMessage(laptop.toPlay());
+                            break;
+                        case 3:
+                            Vista.displayMessage(laptop.toReproduce());
+                            break;
+                        case 4:
+                            Vista.displayMessage(laptop.toBrowse(Vista.askString("Ingrese el nombre de una pagina: ")));
+                    }
                     break;
 
                 case 7: 
                     SmartTV smartTV = new SmartTV();
+                    switch(Vista.functionalityMenu(smartTV.getRange(), smartTV.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(smartTV.toReproduce());
+                            break;
+                        case 2:
+                            Vista.displayMessage(smartTV.toBrowse(Vista.askString("Ingrese el nombre de una pagina: ")));
+                            break;
+                    }
                     break;
 
                 case 8:
                     Tablet tablet =  new Tablet();
+                    switch(Vista.functionalityMenu(tablet.getRange(), tablet.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(tablet.toCarry());
+                            break;
+                        case 2:
+                            Vista.displayMessage(tablet.toBrowse(Vista.askString("Ingrese el nombre de una pagina: ")));
+                            break;
+                        case 3:
+                            Vista.displayMessage(tablet.toReproduce());
+                            break;
+                        case 4:
+                            Vista.displayMessage(tablet.toPhotograph());
+                            break;
+                    }
                     break;
 
                 case 9:
                     Smartwatch smartwatch = new Smartwatch();
+                    switch(Vista.functionalityMenu(smartwatch.getRange(), smartwatch.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(smartwatch.toCarry());
+                            break;
+                        case 2:
+                            Vista.displayMessage(smartwatch.toPhotograph());
+                            break;
+                        case 3:
+                            Vista.displayMessage(smartwatch.toCall(Vista.askPhone()));
+                            break;                            
+                    }
                     break;
 
                 case 10:
