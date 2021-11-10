@@ -76,6 +76,22 @@ public abstract class Product{
         return str;
     }
 
+    /**
+     * devuelve el valor  de counter
+     * @return numero entero 
+     */
+    public static int getCounter(){
+        return counter;
+    }
+
+    /**
+     * coloca el nuevo valor  del  contador
+     * @param number numero entero
+     */
+    public static void setCounter(int number){
+        counter = number;
+    }
+
 
     
 

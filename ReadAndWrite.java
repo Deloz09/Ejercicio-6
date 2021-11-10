@@ -7,6 +7,11 @@ import java.util.Scanner;
 
 public class ReadAndWrite {
 
+    /**
+     * Lee la informacion en el  archivo txt
+     * El primer numero debe ser el  valor del contador 
+     * @return devuelve un array de Strings con los valores correspondientes
+     */
     public static String[] read(){
         Scanner scan = findFile();
         String[] data = null;
@@ -41,6 +46,8 @@ public class ReadAndWrite {
 
         return scan;
     }
+
+
 
     /**
      * Metodo que escribe un string

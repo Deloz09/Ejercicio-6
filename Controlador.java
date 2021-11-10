@@ -5,6 +5,21 @@ class Controlador{
         ReadAndWrite.read();
     }
 
+    public static void init(){
+        
+
+    }
+
+
+    public static void exit(){
+
+        String num = String.valueOf(Product.getCounter());
+        ReadAndWrite.writer(num);
+
+        for (Product product : Cart.getProducts()) {            
+            ReadAndWrite.writer(product.objectToString());
+        }
+    }
 
     public static void menu(){
         boolean condicion = true;
@@ -16,6 +31,7 @@ class Controlador{
                 case 2:
                     break;
                 case 3: 
+                    exit();
                     condicion = false;
                     break;
             }
