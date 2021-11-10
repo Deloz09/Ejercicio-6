@@ -8,6 +8,7 @@ public class SmartTV extends Product implements Reproducible, Browsable {
 
         this.price = 400;
         this.brand = brands[rand.nextInt(2)];
+        this.type = "smartTV";
         setFuncionalities();
         setRange();
     }

@@ -9,6 +9,7 @@ public class Laptop extends Product implements Browsable,Playable,Reproducible,P
 
         this.price = 500;
         this.brand = brands[rand.nextInt(2)];
+        this.type = "laptop";          
         setFuncionalities();
         setRange();
     }

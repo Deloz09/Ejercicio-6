@@ -46,7 +46,8 @@ class Controlador{
                 Cart.addProduct(smartwatch);
 
             }else if(data.get(i)[5].equals("desktop")){
-                //Desktop desktop = new Desktop(data.get(i));
+                Desktop desktop = new Desktop(data.get(i));
+                Cart.addProduct(desktop);
 
             }
         }
@@ -143,7 +144,17 @@ class Controlador{
                     break;
 
                 case 5:
-                    Desktop desktop = new Desktop();                    
+                    Desktop desktop = new Desktop();    
+                    switch(Vista.functionalityMenu(desktop.getRange(), desktop.getFunctionalities())){
+                        case 1:
+                            Vista.displayMessage(desktop.toPlay());
+                            break;
+                        case 2:
+                            Vista.displayMessage(desktop.toReproduce());
+                            break;
+                        case 3:
+                            Vista.displayMessage(desktop.toBrowse(Vista.askString("Ingrese el nombre de una pagina: ")));
+                    }                
                     break;
 
                 case 6:

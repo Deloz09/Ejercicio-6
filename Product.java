@@ -72,8 +72,8 @@ public abstract class Product{
      * @return un string con los datos
      */
     public String objectToString(){
-        String str = String.valueOf(this.price) + "," + String.valueOf(this.serialNo) + ","
-                    + String.valueOf(this.markerAR) + "," + this.brand + "," + this.fabricationDate + ","+ this.type +"\n";
+        String str = this.type + "," + String.valueOf(this.price) + "," + String.valueOf(this.serialNo) + ","
+                    + String.valueOf(this.markerAR) + "," + this.brand + "," + this.fabricationDate;
 
         return str;
     }
@@ -94,10 +94,19 @@ public abstract class Product{
         counter = number;
     }
 
+
+    /**
+     * Devuelve las funcionalidades como  un string 
+     * @return String
+     */
     public String getFunctionalities(){
         return this.functionalities;
     }
 
+    /**
+     * El rango de funcionalidades del objeto
+     * @return devuelve  un array de dos numeros enteros
+     */
     public int[] getRange(){
         return this.range;
     }

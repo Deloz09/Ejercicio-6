@@ -8,6 +8,7 @@ public class Tablet extends Product implements Portable, Browsable, Reproducible
 
         this.price = 150;
         this.brand = brands[rand.nextInt(2)];
+        this.type = "tablet";
         setFuncionalities();
         setRange();
     }

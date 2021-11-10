@@ -8,6 +8,7 @@ public class Camera extends Product implements Photographable, Reproducible, Por
 
         this.price = 450;
         this.brand = brands[rand.nextInt(2)];
+        this.type = "camera";
         setFuncionalities();
         setRange();
     }

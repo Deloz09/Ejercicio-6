@@ -8,6 +8,7 @@ public class CellPhone extends Product implements Callable, Portable{
 
         this.price = 50;
         this.brand = brands[rand.nextInt(2)];
+        this.type = "cellphone";
         setFuncionalities();
         setRange();
     }

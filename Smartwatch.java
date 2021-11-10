@@ -8,6 +8,7 @@ public class Smartwatch extends Product implements Photographable, Portable, Cal
 
         this.price = 150;
         this.brand = brands[rand.nextInt(2)];
+        this.type = "smartwatch";
         setFuncionalities();
         setRange();
     }

@@ -9,6 +9,7 @@ public class LinePhone extends Product implements Callable{
 
         this.price = 50;
         this.brand = brands[rand.nextInt(2)];
+        this.type = "linephone";
         setFuncionalities();
         setRange();
     }

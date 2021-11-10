@@ -8,6 +8,7 @@ public class Smartphone extends Product implements Callable, Reproducible, Photo
 
         this.price = 200;
         this.brand = brands[rand.nextInt(2)];
+        this.type = "smartphone";
         setFuncionalities();
         setRange();
     }
