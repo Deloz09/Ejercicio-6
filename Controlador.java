@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 class Controlador{    
+    static Random rand = new Random();
 
     public static void main(String[] args){       
         init();
@@ -73,8 +75,12 @@ class Controlador{
                     store();
                     break;
                 case 2:
+                    Vista.displayCart(Cart.getProducts());;
                     break;
-                case 3: 
+                case 3:
+                    Vista.printReceipt(Vista.askUser(), Vista.askNit(), Product.makeFabDate(), (rand.nextInt(300) + 100));
+                    break;
+                case 4: 
                     exit();
                     condicion = false;
                     break;

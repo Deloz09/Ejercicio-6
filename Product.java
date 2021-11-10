@@ -46,7 +46,7 @@ public abstract class Product{
      * Genera una fecha aleatoria de fabricacion
      * @return devuelve una fecha  en forma de String
      */
-    private static String makeFabDate(){
+    public static String makeFabDate(){
         int day = (rand.nextInt(27)+1);
         int month = (rand.nextInt(11)+1);
         int year = (rand.nextInt(7) + 2014);

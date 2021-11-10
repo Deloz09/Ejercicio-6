@@ -1,5 +1,6 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * Clase Vista
@@ -25,7 +26,8 @@ public class Vista {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~ Menu Principal ~~~~~~~~~~~~~~~~~~~~~\n" +
                             "1. Ver Productos \n" +
                             "2. Ver Carrito \n" + 
-                            "3. Salir");
+                            "3. Comprar \n" +
+                            "4. Salir \n");
         System.out.println("Ingrese opcion: ");
 
         int opcion = 0;
@@ -151,7 +153,7 @@ public class Vista {
      * @return String
      * @throws Exception
      */
-    public String askUser() throws Exception{
+    public static String askUser(){
         String user = "";
         boolean verificacion = false;
 
@@ -167,8 +169,7 @@ public class Vista {
             }
             //En caso de ingreso invalido
         }catch (Exception e){
-            String s = "Ocurrio un error en el ingreso de usuario "+ e.toString();
-            throw new Exception(s);
+            String s = "Ocurrio un error en el ingreso de usuario "+ e.toString();            
         }
         return user;
     }
@@ -178,7 +179,7 @@ public class Vista {
      * @return int
      * @throws Exception
      */
-    public int askNit() throws Exception{
+    public static int askNit(){
         int nit = 0;
         boolean verificacion = false;
 
@@ -195,8 +196,7 @@ public class Vista {
             }
             //En caso de ingreso invalido
         }catch (Exception e){
-            String s = "Ocurrio un error en el ingreso de nit "+ e.toString();
-            throw new Exception(s);
+            String s = "Ocurrio un error en el ingreso de nit "+ e.toString();            
         }
         return nit;
     }
@@ -245,11 +245,28 @@ public class Vista {
 
 
 
-    public void printReceipt(String user, int nit, String fecha, int total){
+    public static void printReceipt(String user, int nit, String fecha, int total){
         System.out.println("------------------FACTURA------------------");
         System.out.println("Nombre: "+user+"\t\t\tFecha: "+fecha);
         System.out.println("NIT: "+nit+"\n");
         System.out.println("Total a pagar: Q"+total);
+    }
+
+
+
+    public static void displayCart(ArrayList<Product> products){
+        System.out.println("~~~~~~~~~~~~~~~~ Carrito de Compras ~~~~~~~~~~~~~~~~\n");
+        for (Product product : products) {
+            String[] str = product.objectToString().split(",");
+            System.out.println("Tipo de producto: " + str[0] + "\n" +
+                                "Precio: " + str[1] + "\n" +
+                                "Numero de Serie : " + str[2] + "\n" +
+                                "AR Marker: " + str[3] + "\n"  +
+                                "Marca: " + str[4] + "\n" +
+                                "Fecha de fabricacion: " + str[5] +"\n\n");
+
+        }
+
     }
     
 }
