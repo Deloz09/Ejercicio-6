@@ -7,13 +7,12 @@ public abstract class Product{
     static Random rand = new Random();
     static int counter = -1;
 
+    protected String type;  
     protected int price;
     protected int serialNo;
     protected int markerAR;
     protected String  brand;
-    protected String fabricationDate;   
-    protected String type;  
-    
+    protected String fabricationDate;
 
     /**
      * Metodo constructor
@@ -30,13 +29,13 @@ public abstract class Product{
      * @param data recibe un String con  los datos necesarios
      */
     public Product(String[] data){
-        this.price = Integer.parseInt(data[0]);
-        this.serialNo = Integer.parseInt(data[1]);
+        this.type = data[0];
+        this.price = Integer.parseInt(data[1]);
+        this.serialNo = Integer.parseInt(data[2]);
         this.markerAR = Integer.parseInt(data[3]);
         this.brand = data[4];
         this.fabricationDate = data[5];
-        
-
+    
     }
 
 
