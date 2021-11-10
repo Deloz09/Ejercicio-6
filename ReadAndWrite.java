@@ -12,14 +12,14 @@ public class ReadAndWrite {
      * El primer numero debe ser el  valor del contador 
      * @return devuelve un array de Strings con los valores correspondientes
      */
-    public static String[] read(){
+    public static ArrayList<String[]> read(){
         Scanner scan = findFile();
-        String[] data = null;
+        ArrayList<String[]> data = new ArrayList<String[]>();
 
-        if(scan.hasNext()){
+        while(scan.hasNext()){
             String line = scan.next();
-            data = line.split(",");
-
+            String[] splited = line.split(",");
+            data.add(splited);
         }
         return data;
     }

@@ -7,5 +7,9 @@ public class Cart {
         return products;
     }
 
+    public static void addProduct(Product product){
+        products.add(product);
+    }
+
 
 }

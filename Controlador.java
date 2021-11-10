@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Controlador{    
 
     public static void main(String[] args){
@@ -6,7 +8,41 @@ class Controlador{
     }
 
     public static void init(){
-        
+        ArrayList<String[]> data = new ArrayList<String[]>();
+        data  = ReadAndWrite.read();
+        Product.setCounter(Integer.parseInt(data.get(0)[0]));
+
+        for(int i = 1; i < data.size(); i++){
+            if(data.get(i)[5].equals("smartphone")){
+                Smartphone smartPhone = new Smartphone(data.get(i));
+                
+
+            }else if(data.get(i)[5].equals("cellphone")){
+                CellPhone cellPhone = new CellPhone(data.get(i));
+
+            }else if(data.get(i)[5].equals("linephone")){
+                LinePhone linePhone = new LinePhone(data.get(i));
+
+            }else if(data.get(i)[5].equals("camera")){
+                Camera camera = new Camera(data.get(i));
+
+            }else if(data.get(i)[5].equals("laptop")){
+                Laptop laptop = new Laptop(data.get(i));
+
+            }else if(data.get(i)[5].equals("smartTV")){
+                SmartTV smartTV = new SmartTV(data.get(i));
+
+            }else if(data.get(i)[5].equals("Tablet")){
+                Tablet tablet = new Tablet(data.get(i));
+
+            }else if(data.get(i)[5].equals("smartwatch")){
+                Smartwatch smartwatch = new Smartwatch(data.get(i));
+
+            }else if(data.get(i)[5].equals("desktop")){
+                //Desktop desktop = new Desktop(data.get(i));
+
+            }
+        }
 
     }
 
