@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Camera extends Product{
+public class Camera extends Product implements Photographable, Reproducible, Portable{
     Random rand =  new Random();
     
     public Camera(){        
@@ -12,5 +12,15 @@ public class Camera extends Product{
 
     public Camera(String camera[]){
         super(camera);
+    }
+
+    private void setFuncionalities(){
+        this.functionalities = "1. Tomar Foto \n" + 
+                                "2. Reproducir Video \n" +
+                                "3. Portable \n";
+    }
+
+    private void setRange(){
+        this.range  = new int[]{1,3};
     }
 }

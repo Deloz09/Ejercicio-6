@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class CellPhone extends Product{
+public class CellPhone extends Product implements Callable, Portable{
     Random rand =  new Random();
     
     public CellPhone(){        
@@ -12,5 +12,10 @@ public class CellPhone extends Product{
 
     public CellPhone(String cell[]){
         super(cell);
+    }
+    
+    private void setFuncionalities(){
+        this.functionalities = "1. Hacer Llamada \n" +
+                                "2. Portar \n";
     }
 }

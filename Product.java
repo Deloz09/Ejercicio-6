@@ -14,6 +14,9 @@ public abstract class Product{
     protected String  brand;
     protected String fabricationDate;
 
+    protected String functionalities;
+    protected int[] range;
+
     /**
      * Metodo constructor
      */
@@ -91,6 +94,11 @@ public abstract class Product{
         counter = number;
     }
 
+    public String getFunctionalities(){
+        return this.functionalities;
+    }
+
+    
 
     
 
